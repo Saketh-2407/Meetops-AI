@@ -1,0 +1,41 @@
+services:
+  db:
+    image: postgres:16
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: meetops
+    ports:
+      - "5432:5432"
+    volumes:
+      - meetops_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d meetops"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+      start_period: 10s
+
+  backend:
+    build: ./backend
+    # Pin to amd64 to prevent BuildKit from exporting a manifest list, which
+    # can corrupt entry-point scripts in Docker Desktop's local image store.
+    platform: linux/amd64
+    ports:
+      - "8000:8000"
+    env_file:
+      - ./backend/.env
+    environment:
+      # Override localhost URL from .env so the container reaches the db service
+      DATABASE_URL: postgresql+psycopg://postgres:postgres@db:5432/meetops
+    depends_on:
+      db:
+        condition: service_healthy
+    volumes:
+      # Bind-mount Google OAuth files (gitignored) at runtime — never baked into image.
+      # If credentials/ is empty the app still starts; Gmail/Calendar actions will
+      # return {"status": "failed", "message": "Gmail not configured: ..."} instead.
+      - ./backend/credentials:/app/credentials
+
+volumes:
+  meetops_data:

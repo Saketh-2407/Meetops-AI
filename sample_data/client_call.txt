@@ -1,0 +1,9 @@
+AccountMgr: Thanks for joining. We wanted to walk through the Q3 deliverables.
+Client: Our main concern is the reporting dashboard. It's slower than we expected.
+Eng: We can optimize the queries. I'll investigate the slow dashboard and report back by next Tuesday.
+Client: We'd also like SSO support added.
+AccountMgr: Let's confirm: we will scope SSO as a Q4 item, not Q3.
+Client: That works. Can we get a written summary of timelines?
+AccountMgr: Yes, I'll send a follow-up email with the updated timeline by tomorrow.
+Eng: One risk: SSO may require a security review that could add two weeks.
+AccountMgr: Noted. Let's schedule a technical review call next week to discuss SSO scope.

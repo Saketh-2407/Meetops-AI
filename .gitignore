@@ -1,0 +1,12 @@
+__pycache__/
+*.py[cod]
+venv/
+.venv/
+.env
+*.sqlite3
+.pytest_cache/
+.DS_Store
+temp_*
+backend/credentials/
+*_err.txt
+*_out.txt

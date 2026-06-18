@@ -1,0 +1,10 @@
+Sarah: Thanks everyone. Today we need to finalize the beta launch plan for the AI tutor app.
+John: The backend API is mostly ready, but we still need load testing before Friday.
+Sarah: Okay, John, please complete load testing by Thursday evening.
+Priya: The UI has two bugs in the onboarding flow. I can fix them by Wednesday.
+Sarah: Great. Let's move beta launch to next Monday instead of this Friday.
+Michael: We also need a follow-up meeting with the marketing team to prepare the launch email.
+Sarah: Good point. I will schedule a marketing sync for Thursday morning.
+John: One blocker is that our OpenAI usage cost is higher than expected.
+Sarah: Let's review cost optimization before launch. Priya, can you check if we can cache repeated queries?
+Priya: Yes, I'll prepare a caching proposal by Friday.

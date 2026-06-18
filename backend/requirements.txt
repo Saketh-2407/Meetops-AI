@@ -1,0 +1,16 @@
+fastapi
+uvicorn[standard]
+python-dotenv
+pydantic>=2
+openai
+langgraph
+langchain-core
+sqlalchemy
+psycopg[binary]
+python-multipart
+langgraph-checkpoint-postgres
+google-api-python-client
+google-auth-httplib2
+google-auth-oauthlib
+dateparser
+requests

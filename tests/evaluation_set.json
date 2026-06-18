@@ -1,0 +1,97 @@
+[
+  {
+    "meeting_id": "product_launch_001",
+    "transcript_file": "sample_data/product_meeting.txt",
+    "expected_decisions": [
+      "Beta launch moved to next Monday"
+    ],
+    "expected_action_items": [
+      {
+        "task_keywords": ["load testing"],
+        "owner": "John",
+        "deadline_contains": "Thursday evening"
+      },
+      {
+        "task_keywords": ["onboarding", "bug"],
+        "owner": "Priya",
+        "deadline_contains": "Wednesday"
+      },
+      {
+        "task_keywords": ["marketing sync"],
+        "owner": "Sarah",
+        "deadline_contains": "Thursday morning"
+      },
+      {
+        "task_keywords": ["cach"],
+        "owner": "Priya",
+        "deadline_contains": "Friday"
+      },
+      {
+        "task_keywords": ["beta launch"],
+        "owner": "Sarah",
+        "deadline_contains": null
+      }
+    ]
+  },
+  {
+    "meeting_id": "engineering_standup_001",
+    "transcript_file": "sample_data/engineering_standup.txt",
+    "expected_decisions": [
+      "Split the integration test suite into two parallel jobs",
+      "Freeze new feature work until the migration is stable"
+    ],
+    "expected_action_items": [
+      {
+        "task_keywords": ["rollback"],
+        "owner": "Dev1",
+        "deadline_contains": "tomorrow",
+        "is_engineering": true
+      },
+      {
+        "task_keywords": ["refresh", "patch"],
+        "owner": "Dev2",
+        "deadline_contains": "end of day",
+        "is_engineering": true
+      },
+      {
+        "task_keywords": ["integration", "parallel"],
+        "owner": "Dev1",
+        "deadline_contains": "tomorrow",
+        "is_engineering": true
+      },
+      {
+        "task_keywords": ["freeze", "feature"],
+        "owner": null,
+        "deadline_contains": null,
+        "is_engineering": false
+      }
+    ]
+  },
+  {
+    "meeting_id": "client_call_001",
+    "transcript_file": "sample_data/client_call.txt",
+    "expected_decisions": [
+      "SSO will be scoped as a Q4 item, not Q3"
+    ],
+    "expected_action_items": [
+      {
+        "task_keywords": ["dashboard"],
+        "owner": "Eng",
+        "deadline_contains": "next Tuesday",
+        "is_engineering": true
+      },
+      {
+        "task_keywords": ["follow-up email", "timeline"],
+        "owner": "AccountMgr",
+        "deadline_contains": "tomorrow",
+        "is_engineering": false
+      },
+      {
+        "task_keywords": ["technical review"],
+        "owner": "AccountMgr",
+        "deadline_contains": "next week",
+        "is_engineering": false
+      }
+    ]
+  }
+]

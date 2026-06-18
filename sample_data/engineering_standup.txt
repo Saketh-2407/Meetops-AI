@@ -1,0 +1,8 @@
+Lead: Quick standup. Where are we on the migration?
+Dev1: I finished the schema migration script. Still need to test rollback by tomorrow.
+Dev2: The new auth service is deployed to staging. I found a token refresh bug, will patch today.
+Lead: Good. Dev2, please patch the refresh bug and redeploy to staging by end of day.
+Dev1: Blocker: the CI pipeline keeps timing out on integration tests.
+Lead: Let's decide to split the integration suite into two parallel jobs. Dev1, can you own that?
+Dev1: Sure, I'll set that up tomorrow.
+Lead: We also agreed to freeze new feature work until the migration is stable.
